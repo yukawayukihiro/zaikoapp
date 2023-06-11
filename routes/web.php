@@ -21,3 +21,5 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/zaiko.detail', 'App\Http\Controllers\ProductsController@getDetail');
+Route::get('/zaiko.add', 'App\Http\Controllers\ProductsController@getAdd');
+Route::post('/zaiko.create', 'App\Http\Controllers\ProductsController@getCreate');
