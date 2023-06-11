@@ -1,4 +1,4 @@
-@extends('layouts.app_template')
+@extends('layouts.app')
 
 @section('title','商品情報詳細画面');
 
