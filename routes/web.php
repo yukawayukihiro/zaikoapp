@@ -23,3 +23,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/zaiko.detail', 'App\Http\Controllers\ProductsController@getDetail');
 Route::get('/zaiko.add', 'App\Http\Controllers\ProductsController@getAdd');
 Route::post('/zaiko.create', 'App\Http\Controllers\ProductsController@getCreate');
+Route::get('/zaiko.topedit', 'App\Http\Controllers\ProductsController@getTopEdit');
+Route::get('/zaiko.edit/{id}', 'App\Http\Controllers\ProductsController@getEdit');
+Route::post('/zaiko.update', 'App\Http\Controllers\ProductsController@getUpdate');
