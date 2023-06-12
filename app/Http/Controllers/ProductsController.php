@@ -50,4 +50,14 @@ class ProductsController extends Controller
         ]);
         return redirect('/zaiko.topedit');
     }
+
+    public function getList () {
+        $product_items = Products::all();
+        return view('zaiko_list', compact('product_items'));
+    }
+
+    public function getDelete ($id) {
+        Products::where('id', $id)->delete();
+        return redirect('/zaiko.list');
+    }
 }

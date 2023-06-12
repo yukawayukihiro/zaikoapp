@@ -26,3 +26,5 @@ Route::post('/zaiko.create', 'App\Http\Controllers\ProductsController@getCreate'
 Route::get('/zaiko.topedit', 'App\Http\Controllers\ProductsController@getTopEdit');
 Route::get('/zaiko.edit/{id}', 'App\Http\Controllers\ProductsController@getEdit');
 Route::post('/zaiko.update', 'App\Http\Controllers\ProductsController@getUpdate');
+Route::get('/zaiko.list', 'App\Http\Controllers\ProductsController@getList');
+Route::post('/zaiko.del/{id}', 'App\Http\Controllers\ProductsController@getDelete');
