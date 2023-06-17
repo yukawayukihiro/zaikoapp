@@ -28,3 +28,4 @@ Route::get('/zaiko.edit/{id}', 'App\Http\Controllers\ProductsController@getEdit'
 Route::post('/zaiko.update', 'App\Http\Controllers\ProductsController@getUpdate');
 Route::get('/zaiko.list', 'App\Http\Controllers\ProductsController@getList');
 Route::post('/zaiko.del/{id}', 'App\Http\Controllers\ProductsController@getDelete');
+Route::post('/zaiko.search', 'App\Http\Controllers\ProductsController@getSearch');

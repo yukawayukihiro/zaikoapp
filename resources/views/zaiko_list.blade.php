@@ -3,6 +3,17 @@
 @section('title','商品情報一覧')
 
 @section('content')
+    <h1>商品情報検索フォーム</h1>
+    <form action="/zaiko.search" method="post">
+        @csrf
+        <label>商品名</label>
+        <input type="text" name="product_name" placeholder="商品名で検索"><br>
+        <label>価格</label>
+        <input type="text" name="price" placeholder="価格で検索"><br>
+        <label>在庫数</label>
+        <input type="text" name="stock" placeholder="在庫数で検索"><br>
+        <button type="submit">検索</button>
+    </form>
     <h1>商品情報一覧</h1>
     <table border="1">
         <tr>
