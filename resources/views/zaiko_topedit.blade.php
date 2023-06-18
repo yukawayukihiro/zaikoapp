@@ -17,4 +17,5 @@
         </tr>
         @endforeach
     </table>
+    <button onclick="location.href='{{url('/zaiko.detail')}}'">戻る</button>
 @endsection

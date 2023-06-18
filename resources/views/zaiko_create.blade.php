@@ -38,4 +38,5 @@
             <tr><th></th><td><input type="submit" value="登録"></td></tr>
         </table>
     </form>
+    <button onclick="location.href='{{url('/zaiko.list')}}'">戻る</button>
 @endsection

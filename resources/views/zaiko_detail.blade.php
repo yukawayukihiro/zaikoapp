@@ -14,4 +14,6 @@
         </tr>
         @endforeach
     </table>
+    <button onclick="location.href='{{url('/zaiko.list')}}'">戻る</button>
+    <button onclick="location.href='{{url('/zaiko.topedit')}}'">商品情報編集</button>
 @endsection

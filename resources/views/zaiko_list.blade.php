@@ -31,4 +31,6 @@
         </tr>
         @endforeach
     </table>
+    <button onclick="location.href='{{url('/zaiko.add')}}'">新規登録</button>
+    <button onclick="location.href='{{url('/zaiko.detail')}}'">商品情報詳細</button>
 @endsection

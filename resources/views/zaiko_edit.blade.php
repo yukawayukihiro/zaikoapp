@@ -39,4 +39,5 @@
             <tr><th></th><td><input type="submit" value="編集"></td></tr>
         </table>
     </form>
+    <button onclick="location.href='{{url('/zaiko.topedit')}}'">戻る</button>
 @endsection
