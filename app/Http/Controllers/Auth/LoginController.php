@@ -37,4 +37,8 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+     //ログイン後に商品情報一覧画面へリダイレクト
+    public function redirectPath () {
+        return '/zaiko.list';
+    }
 }
