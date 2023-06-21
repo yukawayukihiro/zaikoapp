@@ -63,21 +63,11 @@ class ProductsController extends Controller
 
     public function getSearch (Request $request) {
         $keyword_name = $request->product_name;
-        $keyword_price = $request->price;
-        $keyword_stock = $request->stock;
 
         if (!empty($keyword_name)) {
             $query = Products::query();
             $product_items = $query->where('product_name', 'like', '%' . $keyword_name . '%')->get();
             return view('zaiko_search', compact('product_items'));
-        } elseif (!empty($keyword_price)) {
-            $query = Products::query();
-            $product_items = $query->where('price', 'like', '%' . $keyword_price . '%')->get();
-            return view('zaiko_search', compact('product_items'));
-        } elseif (!empty($keyword_stock)) {
-            $query = Products::query();
-            $product_items = $query->where('stock', 'like', '%' . $keyword_stock . '%')->get();
-            return view('zaiko_search', compact('product_items'));
-        }
+        } 
     }
 }

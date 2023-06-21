@@ -8,10 +8,6 @@
         @csrf
         <label>商品名</label>
         <input type="text" name="product_name" placeholder="商品名で検索"><br>
-        <label>価格</label>
-        <input type="text" name="price" placeholder="価格で検索"><br>
-        <label>在庫数</label>
-        <input type="text" name="stock" placeholder="在庫数で検索"><br>
         <button type="submit">検索</button>
     </form>
     <h1>商品情報一覧</h1>
