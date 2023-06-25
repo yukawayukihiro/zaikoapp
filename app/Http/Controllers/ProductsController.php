@@ -14,15 +14,19 @@ class ProductsController extends Controller
 
         switch ($select_items) {
             case '1':
+                //デフォルトではID順でソート
                 $product_items = Products::get();
                 break;
             case '2':
+                //価格の高い順にソート
                 $product_items = Products::orderBy('price', 'desc')->get();
                 break;
             case '3':
+                //価格の低い順にソート
                 $product_items = Products::orderBy('price', 'asc')->get();
                 break;
             default :
+                //デフォルトではID順でソート
                 $product_items = Products::get();
                 break;
         }
@@ -66,9 +70,28 @@ class ProductsController extends Controller
         return redirect('/zaiko.topedit');
     }
 
-    public function getList () {
-        $product_items = Products::all();
-        return view('zaiko_list', compact('product_items'));
+    public function getList (Request $request) {
+        $select_items = $request->price;
+
+        switch ($select_items) {
+            case '1':
+                //デフォルトではID順でソート
+                $product_items = Products::get();
+                break;
+            case '2':
+                //価格の高い順にソート
+                $product_items = Products::orderBy('price', 'desc')->get();
+                break;
+            case '3':
+                //価格の低い順にソート
+                $product_items = Products::orderBy('price', 'asc')->get();
+                break;
+            default :
+                //デフォルトではID順でソート
+                $product_items = Products::get();
+                break;
+        }
+        return view('zaiko_list', compact('select_items', 'product_items'));
     }
 
     public function getDelete ($id) {
