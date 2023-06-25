@@ -9,9 +9,24 @@ use App\Http\Requests\ProductsRequest;
 
 class ProductsController extends Controller
 {
-    public function getDetail () {
-        $product_items = Products::all();
-        return view('zaiko_detail', compact('product_items'));
+    public function getDetail (Request $request) {
+        $select_items = $request->price;
+
+        switch ($select_items) {
+            case '1':
+                $product_items = Products::get();
+                break;
+            case '2':
+                $product_items = Products::orderBy('price', 'desc')->get();
+                break;
+            case '3':
+                $product_items = Products::orderBy('price', 'asc')->get();
+                break;
+            default :
+                $product_items = Products::get();
+                break;
+        }
+        return view('zaiko_detail', compact('select_items', 'product_items'));
     }
 
     public function getAdd (Request $request) {

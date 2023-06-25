@@ -4,6 +4,14 @@
 
 @section('content')
     <h1>商品情報詳細画面</h1>
+    <form id="contentsForm">
+        @csrf
+        <select name="price" id="selectPrice">
+            <option value="1" {{$select_items == '1' ? 'selected': ''}}>指定なし</option>
+            <option value="2" {{$select_items == '2' ? 'selected': ''}}>価格が高い順</option>
+            <option value="3" {{$select_items == '3' ? 'selected': ''}}>価格が低い順</option>
+        </select>
+    </form>
     <table border="1">
         <tr>
             <th>商品ID</th><th>商品名</th><th>価格</th><th>在庫数</th><th>コメント</th>
