@@ -8,7 +8,7 @@
         @csrf
         <label>商品名</label>
         <input type="text" name="product_name" placeholder="商品名で検索"><br>
-        <button type="submit">検索</button>
+        <input type="submit" value="検索" id="searchBtn">
     </form>
     <h1>商品情報一覧</h1>
     <form id="contentsForm">
