@@ -29,7 +29,7 @@
             <td>
                 <form action="/zaiko.del/{{$item->id}}" method="post">
                     @csrf
-                    <button type="submit">削除</button>
+                    <button type="submit" id="deleteForm">削除</button>
                 </form>
             </td>
         </tr>
